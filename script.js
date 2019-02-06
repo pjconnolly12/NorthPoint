@@ -17,3 +17,15 @@ window.onscroll = function() {
     }
     prevScrollPos = currentScrollPos;
 }
+
+function formSubmit() {
+  var form = document.getElementById("form");
+  var thanks = document.getElementByI('thanks')
+  if (form.className === 'formVisible') {
+    form.className = 'formHidden';
+    thanks.className = 'thanksVisible';
+  } else {
+    form.className = 'formVisible';
+    thanks.className = 'thanksHidden';
+  }
+}
