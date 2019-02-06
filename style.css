@@ -225,11 +225,14 @@ form input:nth-of-type(4n) {
     height: auto;
     margin: 0px 5px;
   }
+  form {
+    padding: 0px 0px 15px 30px;
+  }
   form input {
-    width: 150px;
+    width: 120px;
   }
   form textarea {
-    width: 180px;
+    width: 160px;
   }
 }
 
