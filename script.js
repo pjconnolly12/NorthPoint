@@ -20,7 +20,7 @@ window.onscroll = function() {
 
 function formSubmit() {
   var form = document.getElementById("form");
-  var thanks = document.getElementByI('thanks')
+  var thanks = document.getElementById('thanks')
   if (form.className === 'formVisible') {
     form.className = 'formHidden';
     thanks.className = 'thanksVisible';
