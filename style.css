@@ -101,7 +101,7 @@ h2 {
 .teamDetail {
   position: absolute;
   width: 60%;
-  top: 10%;
+  top: 20%;
   left: 20%;
   text-align: center;
   background: rgba(0, 0, 0, 0.7);
@@ -199,6 +199,15 @@ form input:nth-of-type(4n) {
   }
 }
 
+@media only screen and (max-width: 800px){
+  .footer {
+    font-size: .8em;
+  }
+  form textarea {
+    width: 250px;
+  }
+}
+
 @media only screen and (max-width: 600px){
   .nav-bar a:not(:first-child) {display: none;}
   .nav-bar a.icon {
@@ -244,7 +253,11 @@ form input:nth-of-type(4n) {
   form textarea {
     width: 160px;
   }
+  .about {
+    font-size: .8em;
+  }
 }
+
 
 @media screen and (max-width: 600px) {
   .nav-bar.responsive {position: relative;}
