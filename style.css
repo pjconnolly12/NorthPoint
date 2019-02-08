@@ -8,12 +8,10 @@ body {
 
 /* Nav-Bar */
 .nav-bar {
-  overflow: hidden;
   background-color: #97a1bd;
   height: auto;
   z-index: 1;
   width: 100%;
-  transition: top 0.3s;
   top: 0;
 }
 .nav-link {
