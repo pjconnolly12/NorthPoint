@@ -11,7 +11,6 @@ body {
   overflow: hidden;
   background-color: #97a1bd;
   height: auto;
-  position: fixed;
   z-index: 1;
   width: 100%;
   transition: top 0.3s;
@@ -41,13 +40,18 @@ body {
 /* Body */
 .main {
   margin-top: 0;
+  height: 100vh;
+  position: relative;
+}
+.bg-imgMain {
+  filter: blur(5px);
+  -webkit-filter: blur(5px);
   background-image: url(billy-hayes-475656-unsplash.jpg);
   background-repeat: no-repeat;
   background-color: #cccccc;
   background-position: center;
   background-size: cover;
-  height: 100vh;
-  position: relative;
+  height: 100%;
 }
 .tagline {
   position: absolute;
@@ -57,6 +61,7 @@ body {
   text-align: center;
   background: rgba(0, 0, 0, 0.7);
   color: white;
+
 }
 h1 {
   font-family: 'Raleway', cursive;
@@ -71,13 +76,18 @@ h2 {
 }
 .about {
   margin-top: 0;
+  height: 100vh;
+  position: relative;
+}
+.bg-imgAbout {
+  filter: blur(5px);
+  -webkit-filter: blur(5px);
   background-image: url(seth-dewey-522275-unsplash.jpg);
   background-repeat: no-repeat;
   background-color: #cccccc;
   background-position: center;
   background-size: cover;
-  height: 100vh;
-  position: relative;
+  height: 100%;
 }
 .aboutDetail {
   position: absolute;
@@ -90,13 +100,18 @@ h2 {
 }
 .team {
   margin-top: 0;
+  height: 100vh;
+  position: relative;
+}
+.bg-imgTeam {
+  filter: blur(5px);
+  -webkit-filter: blur(5px);
   background-image: url(kyle-mcevoy-641461-unsplash.jpg);
   background-repeat: no-repeat;
   background-color: #cccccc;
   background-position: center;
   background-size: cover;
-  height: 100vh;
-  position: relative;
+  height: 100%;
 }
 .teamDetail {
   position: absolute;
@@ -124,13 +139,18 @@ img {
 }
 .contact {
   margin-top: 0;
+  height: 100vh;
+  position: relative;
+}
+.bg-imgContact {
+  filter: blur(5px);
+  -webkit-filter: blur(5px);
   background-image: url(artem-sapegin-1131846-unsplash.jpg);
   background-repeat: no-repeat;
   background-color: #cccccc;
   background-position: center;
   background-size: cover;
-  height: 100vh;
-  position: relative;
+  height: 100%;
 }
 .contactDetail {
   position: absolute;
@@ -217,13 +237,6 @@ form input:nth-of-type(4n) {
     font-size: 2em;
     color: white;
   }
-  .footer {
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    font-size: .8em;
-    height: auto;
-  }
   .teamDetail {
     top: 10%;
   }
@@ -244,6 +257,9 @@ form input:nth-of-type(4n) {
     height: auto;
     margin: 0px 5px;
   }
+  .contactDetail {
+    top: 10%
+  }
   form {
     padding: 0px 0px 15px 30px;
   }
@@ -256,11 +272,20 @@ form input:nth-of-type(4n) {
   .about {
     font-size: .8em;
   }
+  .footer {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    font-size: .8em;
+    height: auto;
+  }
 }
 
 
 @media screen and (max-width: 600px) {
-  .nav-bar.responsive {position: relative;}
+  .nav-bar.responsive {
+    position: relative;
+  }
   .nav-bar.responsive a.icon {
     position: absolute;
     right: 0;
@@ -276,3 +301,36 @@ form input:nth-of-type(4n) {
   }
 }
 
+@media screen and (max-height: 640px){
+  form {
+    height: 170px;
+    flex-wrap: wrap;
+  }
+
+  form textarea {
+    height: 50px !important;
+  }
+
+.teamDetail {
+  position: absolute;
+  width: 60%;
+  top: 10%;
+  left: 20%;
+  text-align: center;
+  background: rgba(0, 0, 0, 0.7);
+  color: white;
+  display: flex;
+  flex-direction: column;
+}
+.teamDetail h1 {
+  font-size: 1.5em;
+}
+.teamMembers {
+  display: flex;
+  justify-content: space-around;
+}
+.member {
+  width: 100%;
+  margin: 10px;
+}
+}
