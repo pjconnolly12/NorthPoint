@@ -170,23 +170,33 @@ img {
   display: none;
 }
 form {
-  display: flex;
-  flex-direction: column;
-  padding: 0px 0px 15px 60px;
+  display: grid;
+  grid-template-columns: auto 1fr 1fr;
+  grid-auto-flow: row dense;
+  grid-gap: .8em;
+  padding: 1.2em;
 }
 form label {
-  text-align: left;
-  padding-top: 10px;
+  grid-column: 1;
+  grid-row: auto;
 }
 form input {
-  width: 200px;
+  grid-column: 2;
+  grid-row: auto;
+  padding: 1em;
+  border: none;
 }
 form textarea {
-  width: 400px;
+  min-height: calc(100% - 2em);
+  width: 100%;
+  border: none;
 }
-form input:nth-of-type(4n) {
-  width: 100px;
-  padding: 5px 0px;
+#message-box {
+  grid-column: 3;
+  grid-row: span 3;
+}
+.submit {
+  grid-column: 2/4;
 }
 
 /* Footer */
@@ -221,9 +231,6 @@ form input:nth-of-type(4n) {
   .footer {
     font-size: .8em;
   }
-  form textarea {
-    width: 250px;
-  }
 }
 
 @media only screen and (max-width: 600px){
@@ -257,16 +264,10 @@ form input:nth-of-type(4n) {
   }
   .contactDetail {
     top: 10%
+    width: 80%;
+    left: 10% ;
   }
-  form {
-    padding: 0px 0px 15px 30px;
-  }
-  form input {
-    width: 120px;
-  }
-  form textarea {
-    width: 160px;
-  }
+
   .about {
     font-size: .8em;
   }
@@ -299,15 +300,16 @@ form input:nth-of-type(4n) {
   }
 }
 
-@media screen and (max-height: 640px){
-  form {
-    height: 170px;
-    flex-wrap: wrap;
-  }
-
-  form textarea {
-    height: 50px !important;
-  }
+@media screen and (max-height: 500px){
+.tagline {
+  top: 20%;
+}
+.aboutDetail {
+  top: 20%;
+}
+.contact {
+  height: 200vh;
+}
 
 .teamDetail {
   position: absolute;
@@ -331,4 +333,55 @@ form input:nth-of-type(4n) {
   width: 100%;
   margin: 10px;
 }
+}
+@media screen and (max-width: 750px){
+  form {
+    display: grid;
+    grid-template-columns: [labels] auto [controls] 1fr;
+    grid-auto-flow: row;
+    grid-gap: .8em;
+    padding: 1.2em;
+  }
+  form label  {
+    grid-column: labels;
+    grid-row: auto;
+  }
+  form input {
+    grid-column: controls;
+    grid-row: auto;
+    border: none;
+    padding: 1em;
+  }
+  #message-box {
+    grid-column-start: 1;
+    grid-column-end: 3;
+  }
+  .submit {
+    grid-column-start: 1;
+    grid-column-end: 3;
+  }
+}
+@media screen and (max-width: 400px){
+  .contactDetail {
+    width: 80%;
+  }
+  form {
+    font-size: .8em;
+  }
+  form input {
+    width: 100px;
+  }
+  form textarea {
+    width: 185px;
+    float: right;
+  }
+  #message-box {
+    grid-column-start: 1;
+    grid-column-end: 3;
+  }
+  #message-box label {
+    position: absolute;
+    top: 285px;
+    left: 25px;
+  }
 }

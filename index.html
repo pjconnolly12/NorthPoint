@@ -74,9 +74,11 @@
         			<input type="text" id="lastname" name="lastname" placeholder="Your last name..">
         			<label for="email">Email:</label>
         			<input type="text" name="email" id="email" placeholder="Your email..">
-        			<label for="subject">Subject:</label>
-        			<textarea id="subject" name="subject" placeholder="Add Message Here.." style="height:100px"></textarea><br>
-        			<input type="submit" value="Submit" onclick="formSubmit()">
+        			<div id="message-box">
+        				<label for="subject">Subject:</label>
+        				<textarea id="subject" name="subject" placeholder="Add Message Here.." style="height:100px"></textarea>
+        			</div>
+        			<input type="submit" value="Submit" class='submit' onclick="formSubmit()">
       			</form>
     		</div>
   		</div>
